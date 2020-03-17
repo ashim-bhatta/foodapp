@@ -1,0 +1,210 @@
+body{
+    margin:0;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Roboto;
+    background-image: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);}
+.form{
+    width: 100%;
+    text-align: center;
+    height: 50vh;
+    color: rgb(95, 92, 92);
+    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    padding: 100px 0 0 0;
+
+    
+}
+form{
+    width: 30vw;
+    height: 35px;
+    min-width: 250px;
+    border: 2px solid hsl(0, 74%, 74%);
+    border-radius: 100px;
+    margin: 0px auto;
+    /* padding: 250px 0 0 0; */
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+
+    
+}
+label{
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 1000;
+    color: rgb(247, 244, 248);
+    /* background: #e7e5e4; */
+    letter-spacing: 2px;
+    text-shadow: 5px 3px 11px #7676768c, 8px 5px 10px #0000009f;
+
+}
+input{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    border: none;
+    padding: 0 0 0 10px;
+    color: gray;
+    
+}
+button{
+    position: absolute;
+    right: 1px;
+    background:rgba(143, 85, 170, 0.589);
+    top: 1px;
+    bottom: 1px;
+    width: 25%;
+    min-width: 75px;
+    border: none;
+    border-radius: 100px;
+    color: rgb(242, 245, 247);
+    outline: none;
+}
+
+.image-container{
+    padding: 30px 0 30px 0;
+    margin: 0 auto;
+    width: 80vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    grid-column-gap: 30px;
+    color: transparent;
+}
+.image{
+    background: rgb(255, 255, 255);
+    padding: 0 30px 30px 30px;
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    box-shadow: 0px 2px 20px rgba(150, 148, 148, 0.815);
+    border-radius: 5px;
+    position: relative;
+    border-radius: 10px;
+}
+.image:hover .image-content{
+    transform: scaleX(1);
+    /* transform-origin: left; */
+}
+.image:hover .empty{
+    transform: scaleX(1);
+    /* transform-origin: right; */
+}
+.image img{
+    /* border-radius: 50%; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+}
+.image-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    clip-path: polygon(0 0, 62% 78%, 57% 100%, 0 100%);
+    background: rgba(66, 222, 196, 0.6);
+    color: white;
+    transform: scaleX(0);
+    transition: 400ms;
+    transform-origin: right;
+}
+.image-content .text{
+    color: rgb(252, 247, 247);
+    position: absolute;
+    left: 30px;;
+    right: 50%;
+    bottom: 20px;
+}
+.text h1{
+    font-size: 14px;
+    font-weight: 700;
+}
+.text span{
+    color: rgb(255, 255, 255);
+    font-size: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 33;
+}
+.text span::after{
+    content:'';
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    bottom: -2px;
+    top: 95%;
+    background: rgb(209, 251, 124);
+    transition: 300ms;
+    z-index: -1;
+}
+.text:hover span::after{
+    top: -4px;
+}
+.text:hover span{
+    color: rgb(15, 235, 198);
+}
+
+.empty{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    transition: 400ms;
+    transform: scaleX(0);
+    clip-path: polygon(0 17%, 58% 54%, 70% 100%, 0 100%);
+    background: rgba(66, 222, 201, 0.692);
+    transform-origin: left;
+}
+.steps{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    color: white;
+    display: none;
+    justify-content: center;
+    z-index: 237467236472364823764723;
+    align-items: center;
+    background-color: rgba(66, 222, 201, 0.932);
+    transition: 300ms;
+}
+.steps h1{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+.steps ul{
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+}
+.steps ul li{
+    display: block;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: white;
+    list-style: upper-roman;
+}
